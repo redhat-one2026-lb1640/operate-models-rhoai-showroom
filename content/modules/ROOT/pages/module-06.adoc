@@ -1,0 +1,32 @@
+
+
+== Story
+
+<img src="images/story-page4.png" alt="Aerendil securing the AI model with Zero Trust principles" title="Aerendil securing the AI model with Zero Trust principles" />
+In moments, the Forge produced a new seeing-stone, a retrained model.
+ But Aerendil knew that Sauron's malice was not limited to the battlefield. The Dark Lord's servants could weave whispers of corruption into the very fabric of data. Aerendil initiated a Spell of Warding, a deep scan of the entire process. "From the first line of code to the final artifact, no shadow must pass," he declared. (He was hardening the model and verifying the integrity of the entire AIML software supply chain to protect against threats from Mordor's offensive cyber operators).
+ 
+ == What you will accomplish in this module:
+
+* Look through the CICD pipeline results (scans, etc)
+* Check for adherance to security, ZT, supply chain, etc policies
+* Threat hunting against the built model
+
+== Step 1
+
+Do Stuff
+
+== Step 2
+
+Do Stuff
+
+== Step 3
+
+Do Stuff
+
+== What you accomplished in this module
+
+* Thing 1
+* Thing 2
+* Thing 3
+ 

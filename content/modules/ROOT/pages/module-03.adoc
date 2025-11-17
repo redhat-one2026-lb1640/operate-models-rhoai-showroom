@@ -1,0 +1,37 @@
+= Deploy
+
+== Story 
+
+<img src="images/story-page2.png" alt="Aerendil, the Loremaster of Gondor, interfacing with the Machine Spirit" title="Aerendil, the Loremaster of Gondor, interfacing with the Machine Spirit" />
+In the high chambers of the Tower of Ecthelion, where the winds of the world could be heard 
+sighing against ancient stone, Aerendil kept his watch.
+He was a Loremaster of the Integrated Cortex, and though he bore no sword, his mind was the sharpest weapon in the White City of Minas Tirith. 
+Before him, a console of polished obsidian and mithril glowed, not with fire, but with the light of a thousand flowing runes—the lifeblood of Gondor's defense.
+For in this age, the might of Man was wedded to the logic of the Machine Spirit, an advanced AI, and Aerendil was its master and guardian.
+
+== What you will accomplish in this module:
+
+* Deploy an existing model
+* Thing 2
+* Thing 3
+
+== Step 1
+
+Do Stuff
+
+== Step 2
+
+Do Stuff
+
+== Step 3
+
+Do Stuff
+
+== What you accomplished in this module
+
+* Thing 1
+* Thing 2
+* Thing 3
+
+
+

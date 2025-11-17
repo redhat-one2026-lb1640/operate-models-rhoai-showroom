@@ -1,0 +1,30 @@
+= Conclusions
+
+== What did 
+
+<img src="images/story-page5.png" alt="Aerendil deploying the secured AI model using a Canary Deployment strategy" title="Aerendil deploying the secured AI model using a Canary Deployment strategy" />
+The model was clean, but Aerendil was cautious. A full deployment could be disastrous if some unseen flaw remained. He would send the update to a single unit first—to Captain Bereg's company. "Let one arrow fly before we empty the quiver," he thought. This was a Canary Deployment, a small test to prove the solution in the heart of the battle. A single thread of light shot from his tower across the plains to the ruins of Osgiliath, carrying the precious update.
+
+== What you will accomplish in this module:
+
+* Perform a canary deployment of the new model to a single user
+* Thing 2
+* Thing 3
+
+== Step 1
+
+Do Stuff
+
+== Step 2
+
+Do Stuff
+
+== Step 3
+
+Do Stuff
+
+== What you accomplished in this module
+
+* Thing 1
+* Thing 2
+* Thing 3

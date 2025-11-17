@@ -1,0 +1,31 @@
+= Feedback
+
+== Story
+<img src="images/story-page2.png" alt="Aerendil, the Loremaster of Gondor, interfacing with the Machine Spirit" title="Aerendil, the Loremaster of Gondor, interfacing with the Machine Spirit" />
+
+A frantic message, carried on waves of thought, arrived from the front lines at Osgiliath. It was from Captain Bereg, a grim veteran. "The Eagles have been blinded!" he cried, his voice strained. The 'Eagle's Eye' launchers, Gondor's newest automated anti-Oliphaunt defenses, were failing. "The enemy has wrought some new sorcery! The towers upon the backs of the Mûmakil shimmer with a fell light, a shifting pattern that our seeing-stones cannot comprehend. The targeting locks break like glass!" (The computer vision AI used by the launchers could no longer identify its target).</p>
+
+
+== What you will accomplish in this module:
+
+* Receive tips and warnings from users about problems with your AIML model
+* Collect fresh data from your users that you will use to retrain and tune your model
+* Manually analyze the data and assess that you will need to update your model (identifications that previously worked are now failing)
+
+== Step 1
+
+Do Stuff
+
+== Step 2
+
+Do Stuff
+
+== Step 3
+
+Do Stuff
+
+== What you accomplished in this module
+
+* Thing 1
+* Thing 2
+* Thing 3

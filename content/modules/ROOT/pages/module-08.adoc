@@ -1,0 +1,30 @@
+= Canary Test
+
+== Story
+
+<img src="images/story-page6.png" alt="Aerendil performing a Canary Deployment of the secured AI model" title="Aerendil performing a Canary Deployment of the secured AI model" />
+"Direct hit!" Bereg's triumphant cry was the signal Aerendil awaited. The canary had sung. Now, he began the full rollout. He commanded the Forge to perform an A/B test, deploying the new model to half the launchers on the wall while the other half retained the old. The results were stark. One data-stream showed continued failure; the other, a cascade of successful target locks. (The A/B test provided live, comparative data proving the new model's effectiveness).
+
+== What you will accomplish in this module:
+
+* Deploy the new model and configure a fraction of clients to use this new model
+* set up a data validation loop
+* Manually assess the validation of the new model 
+
+== Step 1
+
+Do Stuff
+
+== Step 2
+
+Do Stuff
+
+== Step 3
+
+Do Stuff
+
+== What you accomplished in this module
+
+* Thing 1
+* Thing 2
+* Thing 3

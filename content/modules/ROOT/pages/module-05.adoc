@@ -1,0 +1,31 @@
+= Retrain
+
+== Story
+
+<img src="images/story-page3.png" alt="Aerendil retraining the AI model using Red Hat OpenShift AI" title="Aerendil retraining the AI model using Red Hat OpenShift AI" />
+
+The visual data from Bereg's position flooded Aerendil's console. He saw the strange, shifting glyphs on the new Oliphaunt towers—a camouflage of pure data, designed to deceive. "So, the Shadow learns," Aerendil murmured. He turned to the heart of his chamber, the Forge of Gondor. "Awaken, great mind!" he commanded. "Behold the work of the Enemy. Learn its new form!" He fed the new images into the system, initiating a powerful retraining sequence. (Aerendil used the new field data to retrain the computer vision model on his Red Hat OpenShift AI powered AIML and MLOps platform, using a pre-built DevSecOps pipeline).
+
+== What you will accomplish in this module:
+
+* Retrain a model (via the EZ bake oven trick)
+* Invoke a CICD validation pipeline to deploy the new model in a test environment
+* Thing 3
+
+== Step 1
+
+Do Stuff
+
+== Step 2
+
+Do Stuff
+
+== Step 3
+
+Do Stuff
+
+== What you accomplished in this module
+
+* Thing 1
+* Thing 2
+* Thing 3

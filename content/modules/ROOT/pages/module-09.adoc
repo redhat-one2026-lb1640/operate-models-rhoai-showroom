@@ -1,0 +1,30 @@
+
+== Story
+
+<img src="images/story-page7.png" alt="Aerendil performing a Blue-Green Deployment of the secured AI model" title="Aerendil performing a Blue-Green Deployment of the secured AI model" />
+With the new model's superiority proven, the time had come. Aerendil initiated the final phase: a Blue-Green Deployment. He activated a fully parallel system—the "Green"—running the new model. Then, with a single, silent command, he rerouted the entire defensive network from the old "Blue" system to the new. The switch was instantaneous. Not a single launcher went offline; there was no break in the shield wall. The Forge's power scaled seamlessly, meeting the demands of total war.
+
+== What you will accomplish in this module:
+
+* Update all clients to use the new model
+* Keep the old model up and running in case it needs to be reverted
+* Set up a monitor the system & model for any problems
+
+== Step 1
+
+Do Stuff
+
+== Step 2
+
+Do Stuff
+
+== Step 3
+
+Do Stuff
+
+== What you accomplished in this module
+
+* Thing 1
+* Thing 2
+* Thing 3
+

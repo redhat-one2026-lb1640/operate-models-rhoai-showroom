@@ -1,0 +1,33 @@
+
+
+== Story
+
+
+
+<img src="images/story-page8.png" alt="The Eagles deploying the secured AI model to defeat the Oliphaunt towers" title="The Eagles deploying the secured AI model to defeat the Oliphaunt towers" />
+The cry went up along the walls of Minas Tirith. The sky, once dark with the threat of the Mûmakil, was now filled with the avenging light of the Eagle's Eyes. The great beasts, their deceptive towers shattered by unerring projectiles, crashed to the earth. The greatest siege weapons of Mordor were broken, their power undone not by sword or spear, but by a line of code and a flawless deployment.
+
+
+== What you will accomplish in this module:
+
+* Point a client data feed at the new model and watch it go
+* Scale up the new model server
+* Terminate the old model server and mark for deletion
+
+== Step 1
+
+Do Stuff
+
+== Step 2
+
+Do Stuff
+
+== Step 3
+
+Do Stuff
+
+== What you accomplished in this module
+
+* Thing 1
+* Thing 2
+* Thing 3
