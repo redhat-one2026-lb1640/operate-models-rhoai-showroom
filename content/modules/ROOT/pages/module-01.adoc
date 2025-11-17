@@ -1,12 +1,70 @@
-= Building an Application with rpms
+= Introduction
 
-== Downloading the UBI
+This module is expected to 10 minutes to complete.
 
-In this lab, you will be installing software into the container 
-image running as an interactive application. To do this you will
-need `yum`, but do not need `systemd` for managing services within the
-container environment.  For that reason, you will be using the *Standard*
-UBI image (as opposed to the Minimal or Multi-service images).
+
+== Story
+
+<img src="images/story-cover.png" alt="The Loremaster and the Shadow Algorithm" title="The Loremaster and the Shadow Algorithm" />
+
+== Motivation
+
+
+AI will change how we live, work, and experience our everyday lives. 
+In this hands-on lab, participants get a last of the tools that will power this future. 
+We will use Openshift AI, Red Hats AIML platform based on OpenShift Container Platform to create models and deploy these to production quality.
+
+In an era where adversaries are increasingly using AI to evade detection, security teams must leverage advanced platforms to deploy, manage, and secure their own AI capabilities at speed and scale.
+ This session demonstrates how Red Hat OpenShift AI empowers teams to rapidly transition from experimental models in a Jupyter Workbench to production-grade deployments—while embedding security throughout the lifecycle.
+ 
+ We will walk through a complete AI Threat Hunting use case
+ * starting with data exploration and model development inside OpenShift AI Workbench
+ * moving to model packaging and deployment as an API service, and finally applying Zero Trust principles to protect both the model and its data.
+ * Attendees will see how to integrate role-based access controls (RBAC), network isolation, and model observability for compliance and operational safety. 
+ 
+ 
+ Key takeaways include: 
+ 
+ * How to use OpenShift AI Workbench for rapid iteration on security-focused models.
+ * Best practices for securing AI endpoints and pipelines against adversarial attacks.
+ * Applying OpenShift-native monitoring and governance to sustain trust in AI-powered threat hunting. 
+ * Whether you are a data scientist, security engineer, or platform architect, you will leave with a clear blueprint for securely operationalizing AI models in mission-critical environments.
+
+
+== Introduction
+
+== What does Operationalize mean?
+
+
+
+=== Production hardening
+
+production hardening of AI systems for operations means we need to prepare our architecture, infrastructure, and processes to ensure that AI models can be deployed, monitored, and maintained effectively in a production environment. This involves several key aspects:
+* Scalability: Ensuring that the AI systems can handle increased workloads and user demands without performance degradation.
+* Reliability: Implementing robust systems that can operate continuously with minimal downtime and can recover quickly from failures.
+* Security: Protecting AI models and data from unauthorized access, tampering, and adverse attacks.
+
+
+
+=== Testing 
+
+...
+
+=== Deploy
+
+
+=== Update
+
+
+=== Scale 
+
+
+=== Retire
+
+
+
+
+
 
 Using the "buildah from" command will download and meld the container image. This particular image we are using is the Red Hat Universal Base Image or UBI. From the ourput of the command, you will notice that we are pulling down the latest one, which is for RHEL 9. 
 
