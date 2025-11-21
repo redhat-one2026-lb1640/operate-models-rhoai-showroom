@@ -13,7 +13,12 @@
 
 == Step 1
 
-Do Stuff
+* Deploy the new model from TEST to a PROD project 
+* configure the model proxy so that a fraction of clients to use this new model
+* configure a model accuracy alert for the new model 
+
+===References and More learning...
+* production deployment documentation: https://docs.openshift.com/container-platform/4.13/applications/deployments/what-deployments-are.html
 
 == Step 2
 

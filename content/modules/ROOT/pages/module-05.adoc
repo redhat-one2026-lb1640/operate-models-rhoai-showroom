@@ -8,15 +8,22 @@ The visual data from Bereg's position flooded Aerendil's console. He saw the str
 
 == What you will accomplish in this module:
 
-* Retrain a model (via the EZ bake oven trick)
+* deploy the newly retrained model (via the EZ bake oven trick)
 * Invoke a CICD validation pipeline to deploy the new model in a test environment
-* Thing 3
+* Verify the new model is working as expected (cheap test hit the end point)
 
 == Step 1
 
 Do Stuff
 
 == Step 2
+
+* run the validation pipeline to test the newly retrained model in a staging environment
+* tests include accuracy, performance, security, and compliance checks
+** accuracy: some minimum accuracy threshold must be met against a well defined test data set
+** performance: 
+** security: run a basic scan
+** compliance: check for policy adherence 
 
 Do Stuff
 

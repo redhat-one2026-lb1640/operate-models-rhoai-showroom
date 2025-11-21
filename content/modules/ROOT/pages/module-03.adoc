@@ -12,8 +12,8 @@ For in this age, the might of Man was wedded to the logic of the Machine Spirit,
 == What you will accomplish in this module:
 
 * Deploy an existing model
-* Thing 2
-* Thing 3
+* Exercise the model to show it working -- (cheap test hit the end point)
+* Drop an image on a client that sends (via a message bus) that to the model endpoint
 
 == Step 1
 

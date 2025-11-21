@@ -1,4 +1,4 @@
-
+= Harden
 
 == Story
 
@@ -9,20 +9,27 @@ In moments, the Forge produced a new seeing-stone, a retrained model.
  == What you will accomplish in this module:
 
 * Look through the CICD pipeline results (scans, etc)
-* Check for adherance to security, ZT, supply chain, etc policies
 * Threat hunting against the built model
+* Check for adherance to security, ZT, supply chain, etc policies
 
 == Step 1
 
-Do Stuff
+* example the CICD verification pipeline run and each individual task
+
 
 == Step 2
 
-Do Stuff
+* access the kestrel appliance a backend
+	
+* pint kestrel at the model
+* review the kestrel scan results for any anomalies or issues
+
 
 == Step 3
 
-Do Stuff
+* review the conformance policies from the EC/conforma rules that are applied 
+* run a policy check pipeline against the built model
+* review the policy check results for any violations or issues
 
 == What you accomplished in this module
 

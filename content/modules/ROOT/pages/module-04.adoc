@@ -8,19 +8,31 @@ A frantic message, carried on waves of thought, arrived from the front lines at 
 
 == What you will accomplish in this module:
 
-* Receive tips and warnings from users about problems with your AIML model
-* Collect fresh data from your users that you will use to retrain and tune your model
+* Receive tips and warnings from users about problems with your AIML model (send a "bad image", it fires an alert)
+* Collect fresh data from your users that you will use to retrain and tune your model (labeling)
 * Manually analyze the data and assess that you will need to update your model (identifications that previously worked are now failing)
 
 == Step 1
+
+You are manually watching the model performance on a dashboard/raw logs/some other indicator and observe that the model accuracy is degrading over time.
+
 
 Do Stuff
 
 == Step 2
 
+* nice to have -- a custom RHOAI model accuracy alert that notifies the mission operator that the model accuracy has fallen below an acceptable threshold
+
 Do Stuff
 
+* "wait" for additional data to come in from the field -- additional observations from the users and photos of targets that the model is not identifying correctly.
+* look at a S2 bucket or other data store where the "bad images" are being collected for later analysis and labeling.
+
 == Step 3
+
+* set up a new model training job using the newly labeled data to improve the model accuracy and performance.
+* load a new pipeline to retrain the model using the new data collected from the field. (the pipeline will have been pre-built and is just being triggered here).
+* poof exbake oven, model training is already done! 
 
 Do Stuff
 

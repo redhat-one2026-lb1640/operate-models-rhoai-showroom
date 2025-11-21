@@ -62,146 +62,96 @@ production hardening of AI systems for operations means we need to prepare our a
 === Retire
 
 
+== You are the city manager!
+
+In this lab, _you will act the role of a typical city manager_, embarking down the path of a building a smart city. Like a lot of cities, you have too many cars on the road and too much traffic. Your city council and constituents have been calling and demanding you provide a plan to reduce traffic. Plus you are trying to make your city more pedestrian friendly to reduce the number of pedestrian injuries and promote economic activity in local commercial districts.
+
+As a first step, you want to understand traffic in your city and are decide to deploy some smart sensors to measure traffic throughout your street grid. A common type of smart device for this purpose is a traffic light camera:
+
+.A common traffic light camera
+image::https://upload.wikimedia.org/wikipedia/commons/3/32/Red_Light_Camera_%28Sep_3%2C_2013%29.jpg["A common traffic light camera"]
+
+.Another common type traffic light camera
+image::https://ggwash.org/images/made/images/posts/_resized/traffic_cams_800_600_90.jpg["Another common type of traffic light camera"]
+
+Once you are collecting data, you can start simulating scenarios that you can use to plan your traffic signals and timing to improve the flow of traffic, reduce average speeds, accommodate busy pedestrian intersections.
+
+== Github
+
+This lab may require you to create a link:github.com[github] user account, if you did not already have one. This is free and quick and simple to set up. If you do already have an account , go there now and set one up.
+
+== Login and get started
+
+For this introduction lab, we will introduce you to some of the tools you will be using for the remained of the modules.
+
+You should have been assigned a user name by your instructor, `user1…​userN`
+
+For today you are {user} — while many of the following lab sections will automatically configure this for you, keep on eye on things and make sure it is correct. If you notice a problem, you may be able to manually correct the to the correct user or flag a facilitator for assistance.
+
+First thing you should do is navigate to the starting page for your user — we refer to this as your "showroom" and it should look something like this:
+
+.Your initial showroom environment
+image::/intro-lab-initial-user-showroom.png["Your initial showroom environment"]
+
+TIP: We also recommend logging into the terminal in this showroom environment; you may be asked to run command in this during the course of your workshop. In this terminal enter `{login_command}` to login.
+
+Then log into your link:https://{openshift_console_url}[OpenShift Container Platform web console^]. Your user name is `{user}` and your password is `openshift`  .
+
+== Accessing OpenShift AI
+
+In the OpenShift Console, click on the  image:/100002010000003000000024AAAC041571052865.png["apps button"] at the top, image:intro-initial-openshift-console.png["The banner navigation buttons"] then click image:/intro-Openshift-AI-application.png[the OpenShift AI option] to log into OpenShift AI. If you are presented with an access authorization page, click the button to image:/10000201000000A000000020B028AB197DEBE3A3.png["Login to OpenShift"] / This should log you into OpenShift AI.
+
+Once you are in OpenShift AI, click on the menu button image:/100002010000002E000000216426608B65255A13.png[the menu button] in the left navigation pane, and locate and then click on the image:/10000201000000B200000027F58611BB363F3154.png[the data science projects button].
+
+IMPORTANT: The project selection is non-standard; read these instructions carefully
+
+If you are presented with a screen stating `No data science projects yet` , *DO NOT* select the Create data science project button
+
+image::intro-create-data-science-project.png[Create data science project button]
+
+Your project *MAY* have already been created for you. You will need to select:
+
+image::/install-datascience-projects.png[ the project type selector ]
+
+and then
+
+image::/install-datascience-all-projects.png[ the All project option ]
+
+You should see a number of projects shown; find the project `{user}-city` and select this project. *IF* this project does not exist, then select the image:intro-create-data-science-project-button.png[Create data science project button] to create a new project, and name this project `{user}-city`. Do not get creative with the name, as later parts of this lab will depend on this name.
+
+Create a new OpenShift AI Workbench by click image:/100002010000009100000021A1D82C0B6349F1C3.png[the Create Workbench button]. Name this workbench `{user}-workbench` . If you want to add creativity, do so in the description! This *is required* for you to stay consistent with the rest of the lab.
+
+For Image selection, choose image:/100002010000007B0000003FA29A900E8890D587.png[Minimal Python]. You can leave the rest of the fields as the default. At the very bottom, click image:/1000020100000091000000211148800178F97C50.png[the Create Workbench button] .
+
+After a minute or two, you should see the workbench change from image:/10000201000000460000002FDF0FBBBC61A6E1C5.png[starting] to image:/100002010000003A00000030BD8223197D20CCFD.png[running] .
+
+Once `running`, you should be able to access your OpenShift AI Workbench by clicking on the image:/100002010000004200000023E46306A5CE3ADC98.png[open] link to open your new OpenShift AI Workbench.
+
+If presented with an authorization request, you will need to authorize yourself access to your workbench. Click  image:/10000201000000A000000020B028AB197DEBE3A3.png[the Log in with OpenShift ] button to proceed.
+
+Helpful tips for running the commands in this notebook
+There are several commands that are written into this notebook that can be run directly in the notebook.
+
+In general you can move through notebooks in order, and we recommend reading the text of each proceeeding cell to understand what is going on. Follow in order and click on the commands provided; you can press [ Shift ] + [ Enter ] to execute these command cells.
+
+You can use the arrow keys to move to the next section of the notebook.
+
+In some cases you will need or want to open a Terminal inside your OpenShift AI Workbench to load the course resources. There are many ways to open a terminal, but here is one that always works: at the top of the notebook interface, click image:/100002010000002300000017A7751A2F8CB5671D.png[ the File menu] then image:/100002010000002800000016B63989EE943480F7.png[the new option], and finally the image:/100002010000004D00000018604E6A830090C94F.png[the terminal option].
+
+NOTE: We recommend leaving this terminal open during the this lab. You will be asked to execute commands in it.
 
 
+== Acronyms used in this lab
 
+The following acronyms are used in this lab
 
-Using the "buildah from" command will download and meld the container image. This particular image we are using is the Red Hat Universal Base Image or UBI. From the ourput of the command, you will notice that we are pulling down the latest one, which is for RHEL 9. 
-
-. Execute the  download the Standard UBI
-image from Red Hat's registry.
-
-+
-[source,sh,role=execute]
-----
-buildah from registry.access.redhat.com/ubi9/ubi
-----
-
-[#repositories]
-== Installing Repositories
-In this lab, you are going to containerize a software package that is already
-packaged in RPM format and stored in the Extra Packages for Enterprise Linux
-(EPEL) repository.
-
-Software often has requirements for prerequisite software that must be installed
-on the machine for it to work properly.  `yum` will resolve those
-dependencies for you, as long as it can locate the required packages in
-repositories defined on the machine.  The Red Hat Universal Base Image (UBI)
-downloaded in the previous step has access to some Red Hat Enterprise Linux
-repositories.  However, the target package for the lab is from EPEL.  
-
-. In the command below, `buildah` is going to run a command on the
-`ubi-working-container` image.  The `--` indicates that the command should be
-executed from within the container, which means the results will be applied into
-the container image.  Lastly, you are providing the `yum` command to install a
-package that defines all of the repositories from EPEL, `epel-release-latest-9`.
-
-+
-[source,bash]
-----
-buildah run ubi-working-container -- yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
-----
-
-
-. You can verify that the above command did not install the RPM on the host system.
-
-+
-[source,bash]
-----
-rpm -q epel-release
-----
-
-NOTE: If your repository configurations are not distributed as an RPM, but instead as
-individual `.repo` files, you could use the `buildah copy` command to copy
-files from the host operating system into the container image.  You will see
-an example of using `buildah copy` later in this lab.
-
-[#software]
-== Installing Software
-
-
-. Now that the yum repositories are defined within the container, execute 
-another `yum install`, within the container, to install the target
-software: `moon-buggy`.
-
-+
-[source,bash]
-----
-buildah run ubi-working-container -- yum -y install moon-buggy
-----
-
-
-== Committing the Container Image
-
-. At this point, the container is configured.  It is time to transition from a
-working container into a committed image.  In the command below, you will use
-the `buildah` command to commit the working container to an image called:
-`moon-buggy`.
-
-+
-[source,bash]
-----
-buildah commit ubi-working-container moon-buggy
-----
-
-+
-. The output of `podman image list` should confirm the image was created.
-
-+
-[source,bash]
-----
-podman image list
-----
-
-
-== Deploy the Container
-
-Now the software has been installed and a new container image created.  It is
-time to spawn a runtime of the container image and validate the software.  The
-software we are using is a command line command.  
-
-. When you `run` the container,
-it will be in interactive (`-it`) mode, based on the `moon-buggy` container
-image and the command run interactively will be `/usr/bin/moon-buggy`.
-
-+
-[source,bash]
-----
-podman run -it moon-buggy /usr/bin/moon-buggy
-----
-
-+
-[source,textinfo]
-----
-
-<<< OUTPUT ABRIDGED >>>
-               MM     MM   OOOOO    OOOOO   NN     N
-               M M   M M  O     O  O     O  N N    N
-               M  M M  M  O     O  O     O  N  N   N
-               M   M   M  O     O  O     O  N   N  N
-               M       M  O     O  O     O  N    N N
-               M       M   OOOOO    OOOOO   N     NN
-
-                     BBBBBB   U     U   GGGGG    GGGGG   Y     Y
-                     B     B  U     U  G     G  G     G   Y   Y
-                     BBBBBB   U     U  G        G          Y Y
-                     B     B  U     U  G   GGG  G   GGG     Y
-                     B     B  U     U  G     G  G     G    Y
-                     BBBBBB    UUUUU    GGGGG    GGGGG   YY
-
-<<< OUTPUT ABRIDGED >>>
-----
-
-. You can now play the Moon Buggy game, which is a text-based version of the
-popular Moon Patrol.  When you are finished, use the `q` command to quit the
-game, which will terminate the container.
-
-+
-Alternatively, you can use `podman` to kill the running container from
-*Terminal 2*.
-
-+
-[source,bash]
-----
-podman kill $(podman ps | grep -v CONTAINER | cut -f1 -d" " )
-----
+.Acronyms used in this lab
+|===
+|Acronym |Meaning/Concept| Learn More
+| NERC | New England Research Cloud| link:https://nerc.mghpcc.org/[About the New England Research Cloud]
+| FIWARE | Future Internet -WARE; a curated framework of Open Source Platform components to accelerate the development of Smart Solutions | link:fiware.org[About FiWARE]
+| NGSI-LD | Next Generation Service Interface for Linked Data | link:https://en.wikipedia.org/wiki/NGSI-LD[About NGSI-LD on wikipedia]
+| JSON-LD | JavaScript Object Notation for Linked Data| link:https://en.wikipedia.org/wiki/JSON-LD[About JSON-LD on wikipedia]
+| OWL| |
+| REST | Representative State Transfer |
+|===
